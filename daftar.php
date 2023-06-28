@@ -125,7 +125,7 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Password</label>
-                <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp"
+                <input type="password" name="pass" id="pass" class="form-control" aria-describedby="emailHelp"
                   placeholder="Enter Password">
               </div>
               <div class="col-md-12 text-center ">
