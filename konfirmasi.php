@@ -22,7 +22,7 @@
 
                 <center><h3>Pembayaran Dapat Melalui :</h3>
                 <hr/>
-                <p> BRI 2132131246 A/N Anicos.Rent </p></center>
+                <p> <?= $info_web->no_rek;?> </p></center>
 
             </div>
         </div>
@@ -60,7 +60,7 @@
                         <tr>
                             <td>Total yg Harus di Bayar </td>
                             <td> :</td>
-                            <td>Rp. <?php echo number_format($hasil['total_harga']);?></td>
+                            <td>Rp. <?php echo number_format($isi['harga']);?></td>
                         </tr>
                     </table>
                     <input type="hidden" name="id_booking" value="<?php echo $hasil['id_booking'];?>">

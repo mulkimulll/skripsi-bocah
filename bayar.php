@@ -94,7 +94,7 @@
                         <tr>
                             <td>Total Harga </td>
                             <td> :</td>
-                            <td>Rp. <?php echo number_format($hasil['total_harga']);?></td>
+                            <td>Rp. <?php echo number_format($isi['harga']);?></td>
                         </tr>
                         <tr>
                             <td>Status </td>
