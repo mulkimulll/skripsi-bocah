@@ -84,10 +84,10 @@
                      Rp. <?php echo number_format($isi['harga']);?>
                 </li>
             </ul>
-            <div class="card-footer">
+            <!-- <div class="card-footer">
                 <a href="<?php echo $url;?>admin/peminjaman/peminjaman.php?id=<?php echo $hasil['kode_booking'];?>" 
                     class="btn btn-success btn-md">Ubah Status Peminjaman</a>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="col-sm-8">
