@@ -22,7 +22,7 @@
                 </p>
                 <ul class="list-group list-group-flush">
                     <?php if($hasil['status'] == 'Tersedia'){?>
-                    <li class="list-group-item bg-primary text-white">
+                    <li class="list-group-item text-white" style="background-color: #bc4c86;">
                         <i class="fa fa-check"></i> Available
                     </li>
                     <?php }else{?>
@@ -30,15 +30,15 @@
                         <i class="fa fa-close"></i> Not Available
                     </li>
                     <?php }?>
-                    <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> <?php echo $isi['deskripsi']?></li>
-                    <li class="list-group-item bg-dark text-white">
+                    <li class="list-group-item bg-dark text-white"><i class="fa fa-check"></i> <?php echo $hasil['deskripsi']?></li>
+                    <li class="list-group-item bg-danger text-white">
                          Rp. <?php echo number_format($hasil['harga']);?>
                     </li>
                 </ul>
                 <hr/>
                 <center>
-                    <a href="booking.php?id=<?php echo $hasil['id_pelayanan'];?>" class="btn btn-success">Booking now!</a>
-                    <a href="index.php" class="btn btn-info">Back</a>
+                    <a href="booking.php?id=<?php echo $hasil['id_pelayanan'];?>" class="btn btn-dark">Booking now!</a>
+                    <a href="index.php" class="btn btn-ungu">Back</a>
                 </center>
             </div>
          </div> 

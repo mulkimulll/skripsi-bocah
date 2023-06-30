@@ -22,7 +22,7 @@
             <ul class="list-group list-group-flush">
 
             <?php if($isi['status'] == 'Tersedia'){?>
-                <li class="list-group-item bg-primary text-white">
+                <li class="list-group-item bg-ungu text-white">
                     <i class="fa fa-check"></i> Available
                 </li>
             <?php }else{?>
@@ -30,8 +30,8 @@
                     <i class="fa fa-close"></i> Not Available
                 </li>
             <?php }?>
-            <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> <?php echo $isi['deskripsi']?></li>
-            <li class="list-group-item bg-dark text-white">
+            <li class="list-group-item bg-dark text-white"><i class="fa fa-check"></i> <?php echo $isi['deskripsi']?></li>
+            <li class="list-group-item bg-danger text-white">
                  Rp. <?php echo number_format($isi['harga']);?>
             </li>
             </ul>
