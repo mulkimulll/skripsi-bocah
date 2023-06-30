@@ -52,7 +52,7 @@
             
                 <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> <?php echo $isi['deskripsi']?></li>
                 <li class="list-group-item bg-dark text-white">
-                     Rp. <?php echo $isi['harga'];?>
+                     Rp. <?php echo number_format($isi['harga']);?>
                 </li>
                 </ul>
             </div>

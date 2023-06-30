@@ -98,7 +98,6 @@ if($_GET['id'] == 'booking')
 
 if($_GET['id'] == 'konfirmasi')
 {
-
     $data[] = $_POST['id_booking'];
     $data[] = $_POST['no_rekening'];
     $data[] = $_POST['nama'];

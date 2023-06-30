@@ -49,7 +49,7 @@
                             <td><?= $isi['merk'];?></td>
                             <td><?= $isi['nama'];?></td>
                             <td><?= $isi['tanggal'];?></td>
-                            <td>Rp. <?= $isi['total_harga'];?></td>
+                            <td>Rp. <?php echo number_format($isi['total_harga']);?></td>
                             <td><?= $isi['konfirmasi_pembayaran'];?></td>
                             <td>
                                 <a class="btn btn-dark" href="bayar.php?id=<?= $isi['kode_booking'];?>" 

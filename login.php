@@ -101,7 +101,9 @@
   </style>
 </head>
 
-<body style="background-image: url(../assets/image/back.jpeg)">
+<body style="background-image: url(../assets/image/back.jpg); background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; height: 800px">
   <div class="container">
     <div class="row">
       <div class="col-md-5 mx-auto">
