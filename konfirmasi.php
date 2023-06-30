@@ -9,8 +9,8 @@
     $kode_booking = $_GET['id'];
     $hasil = $koneksi->query("SELECT * FROM booking WHERE kode_booking = '$kode_booking'")->fetch();
 
-    $id = $hasil['id_mobil'];
-    $isi = $koneksi->query("SELECT * FROM mobil WHERE id_mobil = '$id'")->fetch();
+    $id = $hasil['id_pelayanan'];
+    $isi = $koneksi->query("SELECT * FROM pelayanan WHERE id_pelayanan = '$id'")->fetch();
 ?>
 <br>
 <br>

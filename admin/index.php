@@ -7,15 +7,15 @@
     {
         echo '<script>alert("Harap login !");window.location="login.php"</script>';
     }
-    if(!empty($_POST['nama_rental']))
+    if(!empty($_POST['nama_salon']))
     {
-        $data[] =  htmlspecialchars($_POST["nama_rental"]);
+        $data[] =  htmlspecialchars($_POST["nama_salon"]);
         $data[] =  htmlspecialchars($_POST["telp"]);
         $data[] =  htmlspecialchars($_POST["alamat"]);
         $data[] =  htmlspecialchars($_POST["email"]);
         $data[] =  htmlspecialchars($_POST["no_rek"]);
         $data[] =  1;
-        $sql = "UPDATE infoweb SET nama_rental = ?, telp = ?, alamat = ?, email = ?, no_rek = ?  WHERE id = ? ";
+        $sql = "UPDATE infoweb SET nama_salon = ?, telp = ?, alamat = ?, email = ?, no_rek = ?  WHERE id = ? ";
         $row = $koneksi->prepare($sql);
         $row->execute($data);
         echo '<script>alert("Update Data Info Website Berhasil !");window.location="index.php"</script>';
@@ -52,7 +52,7 @@
                         ?>
                         <div class="form-group">
                             <label for="">Nama rental</label>
-                            <input type="text" class="form-control" value="<?= $edit->nama_rental;?>" name="nama_rental" id="nama_rental" placeholder=""/>
+                            <input type="text" class="form-control" value="<?= $edit->nama_salon;?>" name="nama_salon" id="nama_salon" placeholder=""/>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">

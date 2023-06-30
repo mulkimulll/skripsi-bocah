@@ -8,7 +8,7 @@
     }
     $id = $_GET['id'];
 
-    $sql = "SELECT * FROM mobil WHERE id_mobil =  ?";
+    $sql = "SELECT * FROM pelayanan WHERE id_pelayanan =  ?";
     $row = $koneksi->prepare($sql);
     $row->execute(array($id));
 
@@ -33,11 +33,6 @@
                     <div class="row">
 
                         <div class="col-sm-6">
-
-                            <!-- <div class="form-group row">
-                                <label class="col-sm-3">size</label>
-                                <input type="text" class="form-control col-sm-9" value="<?= $hasil['no_plat'];?>" name="no_plat" placeholder="Isi size">
-                            </div> -->
 
                             <div class="form-group row">
                                 <label class="col-sm-3">pelayanan</label>

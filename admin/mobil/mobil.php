@@ -36,7 +36,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            $sql = "SELECT * FROM mobil ORDER BY id_mobil ASC";
+                            $sql = "SELECT * FROM pelayanan ORDER BY id_pelayanan ASC";
                             $row = $koneksi->prepare($sql);
                             $row->execute();
                             $hasil = $row->fetchAll();
@@ -49,13 +49,12 @@
                             <td><?php echo $no;?></td>
                             <td><img src="../../assets/image/<?php echo $isi['gambar'];?>" class="img-fluid" style="width:200px;"></td>
                             <td><?php echo $isi['merk'];?></td>
-                            <!-- <td><?php echo $isi['no_plat'];?></td> -->
                             <td><?php echo $isi['harga'];?></td>
                             <td><?php echo $isi['status'];?></td>
                             <td><?php echo $isi['deskripsi'];?></td>
                             <td>
-                                <a class="btn btn-dark btn-sm" href="edit.php?id=<?php echo $isi['id_mobil'];?>" role="button">Edit</a>  
-                                <a class="btn btn-ungu text-white btn-sm" href="proses.php?aksi=hapus&id=<?= $isi['id_mobil'];?>&gambar=<?= $isi['gambar'];?>" role="button">Hapus</a>  
+                                <a class="btn btn-dark btn-sm" href="edit.php?id=<?php echo $isi['id_pelayanan'];?>" role="button">Edit</a>  
+                                <a class="btn btn-ungu text-white btn-sm" href="proses.php?aksi=hapus&id=<?= $isi['id_pelayanan'];?>&gambar=<?= $isi['gambar'];?>" role="button">Hapus</a>  
                             </td>
                         </tr>
                         <?php $no++; }?>

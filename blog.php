@@ -5,9 +5,9 @@
     if($_GET['cari'])
     {
         $cari = strip_tags($_GET['cari']);
-        $query =  $koneksi -> query('SELECT * FROM mobil WHERE merk LIKE "%'.$cari.'%" ORDER BY id_mobil DESC')->fetchAll();
+        $query =  $koneksi -> query('SELECT * FROM pelayanan WHERE merk LIKE "%'.$cari.'%" ORDER BY id_pelayanan DESC')->fetchAll();
     }else{
-        $query =  $koneksi -> query('SELECT * FROM mobil ORDER BY id_mobil DESC')->fetchAll();
+        $query =  $koneksi -> query('SELECT * FROM pelayanan ORDER BY id_pelayanan DESC')->fetchAll();
     }
 ?>
 <br>
@@ -52,15 +52,15 @@
                         <?php }?>
                     
                     
-                        <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> Free wig cap</li>
+                        <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> <?php echo $isi['deskripsi']?></li>
                         <li class="list-group-item bg-dark text-white">
-                            <i class="fa fa-money"></i> Rp. <?php echo number_format($isi['harga']);?>/ day
+                             Rp. <?php echo number_format($isi['harga']);?>
                         </li>
                         </ul>
                     <div class="card-body">
                         <center>
-                            <a href="booking.php?id=<?php echo $isi['id_mobil'];?>" class="btn btn-dark">Booking now!</a>
-                            <a href="detail.php?id=<?php echo $isi['id_mobil'];?>" class="btn btn-ungu text-white">Detail</a>
+                            <a href="booking.php?id=<?php echo $isi['id_pelayanan'];?>" class="btn btn-dark">Booking now!</a>
+                            <a href="detail.php?id=<?php echo $isi['id_pelayanan'];?>" class="btn btn-ungu text-white">Detail</a>
                         </center>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
     require 'koneksi/koneksi.php';
     include 'header.php';
     $id = strip_tags($_GET['id']);
-    $hasil = $koneksi->query("SELECT * FROM mobil WHERE id_mobil = '$id'")->fetch();
+    $hasil = $koneksi->query("SELECT * FROM pelayanan WHERE id_pelayanan = '$id'")->fetch();
 ?>
 <div class="container mt-5">
 <div class="row">
@@ -30,14 +30,14 @@
                         <i class="fa fa-close"></i> Not Available
                     </li>
                     <?php }?>
-                    <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> Free wig cap</li>
+                    <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> <?php echo $isi['deskripsi']?></li>
                     <li class="list-group-item bg-dark text-white">
-                        <i class="fa fa-money"></i> Rp. <?php echo number_format($hasil['harga']);?>/ day
+                         Rp. <?php echo number_format($hasil['harga']);?>
                     </li>
                 </ul>
                 <hr/>
                 <center>
-                    <a href="booking.php?id=<?php echo $hasil['id_mobil'];?>" class="btn btn-success">Booking now!</a>
+                    <a href="booking.php?id=<?php echo $hasil['id_pelayanan'];?>" class="btn btn-success">Booking now!</a>
                     <a href="index.php" class="btn btn-info">Back</a>
                 </center>
             </div>

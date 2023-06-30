@@ -38,7 +38,7 @@
     <div class="jumbotron pt-4 pb-4">
         <div class="row">
             <div class="col-sm-8">
-                <h2><b style="text-transform:uppercase;"><?= $info_web->nama_rental;?> </b></h2>
+                <h2><b style="text-transform:uppercase;"><?= $info_web->nama_salon;?> </b></h2>
             </div>
         </div>
     </div>

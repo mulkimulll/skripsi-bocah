@@ -9,8 +9,8 @@
     $kode_booking = $_GET['id'];
     $hasil = $koneksi->query("SELECT * FROM booking WHERE kode_booking = '$kode_booking'")->fetch();
 
-    $id = $hasil['id_mobil'];
-    $isi = $koneksi->query("SELECT * FROM mobil WHERE id_mobil = '$id'")->fetch();
+    $id = $hasil['id_pelayanan'];
+    $isi = $koneksi->query("SELECT * FROM pelayanan WHERE id_pelayanan = '$id'")->fetch();
 
     $unik  = random_int(100,999);
     
@@ -50,9 +50,9 @@
                 <?php }?>
             
             
-                <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> Free wig cap</li>
+                <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> <?php echo $isi['deskripsi']?></li>
                 <li class="list-group-item bg-dark text-white">
-                    <i class="fa fa-money"></i> Rp. <?php echo number_format($isi['harga']);?>/ day
+                     Rp. <?php echo $isi['harga'];?>
                 </li>
                 </ul>
             </div>
@@ -66,11 +66,6 @@
                             <td> :</td>
                             <td><?php echo $hasil['kode_booking'];?></td>
                         </tr>
-                        <!-- <tr>
-                            <td>KTP  </td>
-                            <td> :</td>
-                            <td><?php echo $hasil['ktp'];?></td>
-                        </tr> -->
                         <tr>
                             <td>Nama  </td>
                             <td> :</td>

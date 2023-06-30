@@ -101,12 +101,12 @@
   </style>
 </head>
 
-<body>
+<body style="background-image: url(../assets/image/back.jpeg)">
   <div class="container">
     <div class="row">
       <div class="col-md-5 mx-auto">
         <div id="first">
-          <div class="myform form ">
+          <div class="myform form" style="background-color: rgba(255, 255, 255, 0.5);">
             <div class="logo mb-3">
               <div class="col-md-12 text-center">
                 <h1>Login</h1>

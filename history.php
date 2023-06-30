@@ -6,8 +6,8 @@
     {
         echo '<script>alert("Harap Login");window.location="index.php"</script>';
     }
-    $hasil = $koneksi->query("SELECT mobil.merk, booking.* FROM booking JOIN mobil ON 
-    booking.id_mobil=mobil.id_mobil ORDER BY id_booking DESC")->fetchAll();
+    $hasil = $koneksi->query("SELECT pelayanan.merk, booking.* FROM booking JOIN pelayanan ON 
+    booking.id_pelayanan=pelayanan.id_pelayanan ORDER BY id_booking DESC")->fetchAll();
 ?>
 <br>
 <br>

@@ -1,6 +1,6 @@
     <div class="footer mt-4 bg-dark text-white pt-3 pb-2">
       <div class="container">
-        Copyright <?= date('Y');?> <?= $info_web->nama_rental;?> All Reserved
+        Copyright <?= date('Y');?> <?= $info_web->nama_salon;?> All Reserved
       </div>
     </div>
     <!-- Optional JavaScript -->

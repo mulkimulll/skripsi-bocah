@@ -4,8 +4,8 @@
 if($_GET['id'] == 'konfirmasi')
 {
     $data2[] = $_POST['status'];
-    $data2[] = $_POST['id_mobil'];
-    $sql2 = "UPDATE `mobil` SET `status`= ? WHERE id_mobil= ?";
+    $data2[] = $_POST['id_pelayanan'];
+    $sql2 = "UPDATE `pelayanan` SET `status`= ? WHERE id_pelayanan= ?";
     $row2 = $koneksi->prepare($sql2);
     $row2->execute($data2);
 

@@ -67,33 +67,28 @@ if($_GET['id'] == 'daftar')
 
 if($_GET['id'] == 'booking')
 {
-    $total = $_POST['total_harga'] * $_POST['lama_sewa'];
-    $unik  = random_int(100,999);
-    $total_harga = $total+$unik;
+    // $unik  = random_int(100,999);
 
     $data[] = time();
     $data[] = $_POST['id_login'];
-    $data[] = $_POST['id_mobil'];
-    $data[] = $_POST['ktp'];
+    $data[] = $_POST['id_pelayanan'];
     $data[] = $_POST['nama'];
     $data[] = $_POST['alamat'];
     $data[] = $_POST['no_tlp'];
     $data[] = $_POST['tanggal'];
-    $data[] = $_POST['lama_sewa'];
     $data[] = $_POST['jam'];
-    $data[] = $total_harga;
+    $data[] = $_POST['total_harga'];
     $data[] = "Belum Bayar";
     $data[] = date('Y-m-d');
 
     $sql = "INSERT INTO booking (kode_booking, 
     id_login, 
-    id_mobil, 
-    ktp, 
+    id_pelayanan, 
     nama, 
     alamat, 
     no_tlp, 
-    tanggal, lama_sewa, jam, total_harga, konfirmasi_pembayaran, tgl_input) 
-        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    tanggal, jam, total_harga, konfirmasi_pembayaran, tgl_input) 
+        VALUES (?,?,?,?,?,?,?,?,?,?,?)";
     $row = $koneksi->prepare($sql);
     $row->execute($data);
 

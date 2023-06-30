@@ -19,8 +19,8 @@
         $hsl = $koneksi->query("SELECT * FROM pembayaran WHERE id_booking = '$id_booking'")->fetch();
 
 
-        $id = $hasil['id_mobil'];
-        $isi = $koneksi->query("SELECT * FROM mobil WHERE id_mobil = '$id'")->fetch();
+        $id = $hasil['id_pelayanan'];
+        $isi = $koneksi->query("SELECT * FROM pelayanan WHERE id_pelayanan = '$id'")->fetch();
     }
     
 ?>
@@ -88,9 +88,9 @@
                         <i class="fa fa-close"></i> Not Available
                     </li>
                 <?php }?>
-                <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> Free wig cap</li>
+                <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> <?php echo $isi['deskripsi']?></li>
                 <li class="list-group-item bg-dark text-white">
-                    <i class="fa fa-money"></i> Rp. <?php echo number_format($isi['harga']);?>/ day
+                     Rp. <?php echo number_format($isi['harga']);?>
                 </li>
             </ul>
         </div>
@@ -153,7 +153,7 @@
                             </td>
                         </tr>
                     </table>
-                    <input type="hidden" name="id_mobil" value="<?php echo $isi['id_mobil'];?>">
+                    <input type="hidden" name="id_pelayanan" value="<?php echo $isi['id_pelayanan'];?>">
                     <button type="submit" class="btn btn-dark float-right">
                         Ubah Status
                     </button>

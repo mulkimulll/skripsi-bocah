@@ -11,9 +11,9 @@ if(empty($_SESSION['USER']))
 <div id="carouselId" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <?php 
-            $querymobil =  $koneksi -> query('SELECT * FROM mobil ORDER BY id_mobil DESC')->fetchAll();
+            $querypelayanan =  $koneksi -> query('SELECT * FROM pelayanan ORDER BY id_pelayanan DESC')->fetchAll();
             $no =1;
-            foreach($querymobil as $isi)
+            foreach($querypelayanan as $isi)
             {
         ?>
         <li data-target="#carouselId" data-slide-to="<?= $no;?>" class="<?php if($no == '1'){ echo 'active';}?>"></li>
@@ -22,7 +22,7 @@ if(empty($_SESSION['USER']))
     <div class="carousel-inner" role="listbox">
         <?php 
             $no =1;
-            foreach($querymobil as $isi)
+            foreach($querypelayanan as $isi)
             {
         ?>
         <div class="carousel-item <?php if($no == '1'){ echo 'active';}?>">
@@ -85,7 +85,7 @@ if(empty($_SESSION['USER']))
         <div class="col-sm-9">
             <div class="row">
                 <?php 
-                    $query =  $koneksi -> query('SELECT * FROM mobil ORDER BY id_mobil DESC')->fetchAll();
+                    $query =  $koneksi -> query('SELECT * FROM pelayanan ORDER BY id_pelayanan DESC')->fetchAll();
                     $no =1;
                     foreach($query as $isi)
                     {
@@ -115,14 +115,14 @@ if(empty($_SESSION['USER']))
                         <?php }?>
                     
                     
-                        <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> Free wig cap</li>
+                        <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> <?php echo $isi['deskripsi']?></li>
                         <li class="list-group-item bg-dark text-white">
-                            <i class="fa fa-money"></i> Rp. <?php echo number_format($isi['harga']);?>/ day
+                             Rp. <?php echo number_format($isi['harga']);?>
                         </li>
                         </ul>
                         <div class="card-body">
-                        <center><a href="booking.php?id=<?php echo $isi['id_mobil'];?>" class="btn btn-dark">Booking now!</a>
-                        <a href="detail.php?id=<?php echo $isi['id_mobil'];?>" class="btn btn-ungu text-white">Detail</a></center>
+                        <center><a href="booking.php?id=<?php echo $isi['id_pelayanan'];?>" class="btn btn-dark">Booking now!</a>
+                        <a href="detail.php?id=<?php echo $isi['id_pelayanan'];?>" class="btn btn-ungu text-white">Detail</a></center>
                         </div>
                     </div>
                 </div>

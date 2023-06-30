@@ -8,11 +8,11 @@
     }
     if(!empty($_GET['id'])){
         $id = strip_tags($_GET['id']);
-        $sql = "SELECT mobil.merk, booking.* FROM booking JOIN mobil ON 
-                booking.id_mobil=mobil.id_mobil WHERE id_login = '$id' ORDER BY id_booking DESC";
+        $sql = "SELECT pelayanan.merk, booking.* FROM booking JOIN pelayanan ON 
+                booking.id_pelayanan=pelayanan.id_pelayanan WHERE id_login = '$id' ORDER BY id_booking DESC";
     }else{
-        $sql = "SELECT mobil.merk, booking.* FROM booking JOIN mobil ON 
-                booking.id_mobil=mobil.id_mobil ORDER BY id_booking DESC";
+        $sql = "SELECT pelayanan.merk, booking.* FROM booking JOIN pelayanan ON 
+                booking.id_pelayanan=pelayanan.id_pelayanan ORDER BY id_booking DESC";
     }
     $hasil = $koneksi->query($sql)->fetchAll();
 ?>
@@ -49,8 +49,7 @@
                             <td><?= $isi['merk'];?></td>
                             <td><?= $isi['nama'];?></td>
                             <td><?= $isi['tanggal'];?></td>
-                            <!-- <td><?= $isi['lama_sewa'];?> hari</td> -->
-                            <td>Rp. <?= number_format($isi['total_harga']);?></td>
+                            <td>Rp. <?= $isi['total_harga'];?></td>
                             <td><?= $isi['konfirmasi_pembayaran'];?></td>
                             <td>
                                 <a class="btn btn-dark" href="bayar.php?id=<?= $isi['kode_booking'];?>" 

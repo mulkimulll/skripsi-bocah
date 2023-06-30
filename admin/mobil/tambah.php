@@ -27,11 +27,6 @@
 
                         <div class="col-sm-6">
 
-                            <!-- <div class="form-group row">
-                                <label class="col-sm-3">size</label>
-                                <input type="text" class="form-control col-sm-9" name="no_plat" placeholder="Isi size">
-                            </div> -->
-
                             <div class="form-group row">
                                 <label class="col-sm-3">Pelayanan</label>
                                 <input type="text" class="form-control col-sm-9" name="merk">

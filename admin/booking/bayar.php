@@ -15,8 +15,8 @@
     $c = $koneksi->query("SELECT * FROM pembayaran WHERE id_booking = '$id_booking'")->rowCount();
 
 
-    $id = $hasil['id_mobil'];
-    $isi = $koneksi->query("SELECT * FROM mobil WHERE id_mobil = '$id'")->fetch();
+    $id = $hasil['id_pelayanan'];
+    $isi = $koneksi->query("SELECT * FROM pelayanan WHERE id_pelayanan = '$id'")->fetch();
     
 ?>
 <br>
@@ -79,9 +79,9 @@
                 <?php }?>
             
             
-                <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> Free wig cap</li>
+                <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> <?php echo $isi['deskripsi']?></li>
                 <li class="list-group-item bg-dark text-white">
-                    <i class="fa fa-money"></i> Rp. <?php echo number_format($isi['harga']);?>/ day
+                     Rp. <?php echo number_format($isi['harga']);?>
                 </li>
             </ul>
             <div class="card-footer">

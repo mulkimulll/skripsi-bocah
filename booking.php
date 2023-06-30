@@ -7,7 +7,7 @@
         echo '<script>alert("Harap login !");window.location="index.php"</script>';
     }
     $id = $_GET['id'];
-    $isi = $koneksi->query("SELECT * FROM mobil WHERE id_mobil = '$id'")->fetch();
+    $isi = $koneksi->query("SELECT * FROM pelayanan WHERE id_pelayanan = '$id'")->fetch();
 ?>
 <br>
 <br>
@@ -30,9 +30,9 @@
                     <i class="fa fa-close"></i> Not Available
                 </li>
             <?php }?>
-            <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> Free wig cap/li>
+            <li class="list-group-item bg-info text-white"><i class="fa fa-check"></i> <?php echo $isi['deskripsi']?></li>
             <li class="list-group-item bg-dark text-white">
-                <i class="fa fa-money"></i> Rp. <?php echo number_format($isi['harga']);?>/ day
+                 Rp. <?php echo number_format($isi['harga']);?>
             </li>
             </ul>
         </div>
@@ -65,12 +65,8 @@
                       <label for="">Jam</label>
                       <input type="time" name="jam" id="" required class="form-control">
                     </div> 
-                    <!-- <div class="form-group">
-                      <label for="">Lama Sewa</label>
-                      <input type="number" name="lama_sewa" id="" required class="form-control" placeholder="Lama Sewa">
-                    </div>  -->
                     <input type="hidden" value="<?php echo $_SESSION['USER']['id_login'];?>" name="id_login">
-                    <input type="hidden" value="<?php echo $isi['id_mobil'];?>" name="id_mobil">
+                    <input type="hidden" value="<?php echo $isi['id_pelayanan'];?>" name="id_pelayanan">
                     <input type="hidden" value="<?php echo $isi['harga'];?>" name="total_harga">
                     <hr/>
                     <?php if($isi['status'] == 'Tersedia'){?>

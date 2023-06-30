@@ -14,7 +14,7 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm-4"><?= $info_web->nama_rental;?></div>
+                        <div class="col-sm-4"><?= $info_web->nama_salon;?></div>
                         <div class="col-sm-8"></div>
                     </div>
                     <div class="row mt-3">

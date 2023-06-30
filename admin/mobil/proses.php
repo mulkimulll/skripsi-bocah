@@ -20,14 +20,13 @@ if ($_GET['aksi'] == 'tambah') {
         echo '<script>alert("WARNING !!! Besar Gambar Tidak Boleh Lebih Dari 4 MB !");window.location="tambah.php"</script>';
     } else {
         if (move_uploaded_file($tmp_name, $dir.$name)) {
-            // $data[] = $_POST['no_plat'];
             $data[] = $_POST['merk'];
             $data[] = $_POST['harga'];
             $data[] = $_POST['deskripsi'];
             $data[] = $_POST['status'];
             $data[] = $name;
 
-            $sql = "INSERT INTO `mobil`(`merk`, `harga`, `deskripsi`, `status`, `gambar`) 
+            $sql = "INSERT INTO `pelayanan`(`merk`, `harga`, `deskripsi`, `status`, `gambar`) 
                 VALUES (?,?,?,?,?)";
             $row = $koneksi->prepare($sql);
             $row->execute($data);
@@ -48,7 +47,6 @@ if ($_GET['aksi'] == 'edit') {
 
     $id = $_GET['id'];
 
-    $data[] = $_POST['no_plat'];
     $data[] = $_POST['merk'];
     $data[] = $_POST['harga'];
     $data[] = $_POST['deskripsi'];
@@ -74,8 +72,8 @@ if ($_GET['aksi'] == 'edit') {
         $data[] = $_POST['gambar_cek'];
     }
     $data[] = $id;
-    $sql = "UPDATE mobil SET no_plat= ?, merk=?, harga=?, deskripsi=?, status=?, gambar=?
-        WHERE id_mobil = ?";
+    $sql = "UPDATE pelayanan SET merk=?, harga=?, deskripsi=?, status=?, gambar=?
+        WHERE id_pelayanan = ?";
     $row = $koneksi->prepare($sql);
     $row->execute($data);
 
@@ -89,7 +87,7 @@ if (!empty($_GET['aksi'] == 'hapus')) {
 
     unlink('../../assets/image/'.$gambar);
 
-    $sql = "DELETE FROM mobil WHERE id_mobil = ?";
+    $sql = "DELETE FROM pelayanan WHERE id_pelayanan = ?";
     $row = $koneksi->prepare($sql);
     $row->execute(array($id));
 
