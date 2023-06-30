@@ -144,10 +144,10 @@
                             <td>
                                 <select class="form-control" name="status">
                                     <option <?php if($isi['status'] == 'Tersedia'){echo 'selected';}?> value="Tersedia">
-                                        Tersedia ( Kembali )
+                                        Tersedia
                                     </option>
                                     <option <?php if($isi['status'] == 'Tidak Tersedia'){echo 'selected';}?> value="Tidak Tersedia">
-                                        Tidak Tersedia ( Pinjam )
+                                        Tidak Tersedia
                                     </option>
                                 </select>    
                             </td>
